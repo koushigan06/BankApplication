@@ -1,0 +1,65 @@
+package Bank_App;
+
+public class Bank_class {
+    private String customername;
+    private String customeremail;
+    private String customerAccNo;
+    private String customerPhNo;
+    private double balance;
+    
+    public Bank_class(String customername, String customeremail, String customerAccNo, String customerPhNo, double balance)
+    {
+        this.customername=customername;
+        this.customeremail=customeremail;
+        this.customerAccNo=customerAccNo;
+        this.customerPhNo=customerPhNo;
+        this.balance=balance;
+    }
+    public void deposit(double depositamt)
+    {
+        this.balance+=depositamt;
+        System.out.println("Amount credited= "+depositamt+" The current balance= "+this.balance);
+    }
+    public void withdraw(double withdrawamt)
+    {
+        this.balance-=withdrawamt;
+        if(this.balance<0)
+        {
+            System.out.println("Balance Insufficient");
+        }
+        else{
+            System.out.println("Amount credited= "+withdrawamt+" The current balance= "+this.balance);
+        }
+    }
+    public String getName(){
+        return customername;
+    }
+    public void setName(String customerName){
+        this.customername=customerName;
+    }
+    public String getEmail(){
+        return customeremail;
+    }
+    public void setEmail(String customerEmail){
+        this.customeremail=customerEmail;
+    }
+    public String getAccountNo(){
+        return customerAccNo;
+    }
+    public void setAccountNo(String accountnum){
+        this.customerAccNo=accountnum;
+    }
+    public String getPhNo(){
+        return customerPhNo;
+    }
+    public void setPhNo(String customerphnum){
+        this.customerPhNo=customerphnum;
+    }
+    public double getBalance(){
+        return balance;
+    }
+    public void setName(double Bal){
+        this.balance=Bal;
+    }
+
+}
