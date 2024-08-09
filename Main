@@ -1,0 +1,10 @@
+package Bank_App;
+
+public class Main {
+    public static void main(String[] args){
+        Bank_class bk= new Bank_class("JP", "JPDS@gmail.com", "123456","1234567890", 100);
+        bk.withdraw(50);
+        bk.deposit(100);
+        bk.withdraw(10);
+    }
+}
